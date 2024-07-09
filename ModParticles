@@ -1,0 +1,17 @@
+package com.particles.LucrativeParticles.api;
+
+import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
+
+public class ModParticles {
+    public static final DefaultParticleType WHITE_LEAF = new DefaultParticleType(true) {};
+    public static final DefaultParticleType GOLDEN_LEAF = new DefaultParticleType(true) {};
+    public static final DefaultParticleType SPARK = new DefaultParticleType(true) {};
+
+    public static void registerParticles() {
+        Registry.register(Registry.PARTICLE_TYPE, new Identifier("particles", "white_leaf"), WHITE_LEAF);
+        Registry.register(Registry.PARTICLE_TYPE, new Identifier("particles", "golden_leaf"), GOLDEN_LEAF);
+        Registry.register(Registry.PARTICLE_TYPE, new Identifier("particles", "spark"), SPARK);
+    }
+}
